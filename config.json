@@ -1,0 +1,5 @@
+{
+    "connectionString": "mongodb://localhost/meragaon",
+    "secret": "nodeauthsecret",
+    "databaseName": "meragaon"
+}
