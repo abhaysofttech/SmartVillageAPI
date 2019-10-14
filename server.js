@@ -27,6 +27,8 @@ app.use(passport.initialize());
 app.use('/users', require('./users/users.controller'));
 app.use('/state', require('./state/state.controller'));
 app.use('/city', require('./city/city.controller'));
+app.use('/complain', require('./complain/complain.controller'));
+app.use('/subcomplain', require('./complain/sub-complain/sub-complain.controller'));
 
 // global error handler
 app.use(errorHandler);

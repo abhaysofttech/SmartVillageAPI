@@ -18,7 +18,12 @@ function jwt() {
             // '/state/',
             // '/city/cityregister',
             // '/city',
-            // '/city/state/:statename'
+            // '/city/state/:statename',
+            '/complain',
+            '/complain/register',
+            '/subcomplain',
+            '/subcomplain/register',
+            
         ]
     });
 }

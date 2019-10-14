@@ -9,5 +9,7 @@ mongoose.Promise = global.Promise;
 module.exports = {
     User: require('../users/users.model'),
     State: require('../state/state.model'),
-    City: require('../city/city.model')
+    City: require('../city/city.model'),
+    ComplainType: require('../complain/complain.model'),
+    SubComplainType: require('../complain/sub-complain/sub-complain.model'),
 };

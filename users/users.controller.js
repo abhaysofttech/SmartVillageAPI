@@ -3,7 +3,7 @@ const router = express.Router();
 
 const userService = require('./users.service');
 // call user modal
-const User = require('./users.model')
+const User = require('./users.model');
 
 //routes
 router.get('/', getAll);
