@@ -15,7 +15,6 @@ module.exports = {
 
 
 async function getAllComplainCategory() {
-    console.log("Check ***************")
     return await SubComplainType.find().select('-hash');
 }
 
@@ -24,7 +23,7 @@ async function getById(id) {
 }
 
 async function getByComplainName(complainname) {
-  return await SubComplainType.findOne({ complainname: complainname });
+  return await SubComplainType.find({ complainname: complainname });
 }
 
 

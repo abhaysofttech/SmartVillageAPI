@@ -21,7 +21,7 @@ function jwt() {
             // '/city/state/:statename',
             '/complain',
             '/complain/register',
-            '/subcomplain',
+            '/subcomplain/subcomplainname',
             '/subcomplain/register',
             
         ]
