@@ -4,7 +4,7 @@ const stateService = require('./state.service');
 
 //routes
 router.get('/', getAll);
-router.post('/stateregister', register);
+router.post('/register', register);
 
 
 function getAll(req, res, next) {
@@ -14,7 +14,6 @@ function getAll(req, res, next) {
 }
 
 function register(req, res, next){
-    debugger
     stateService.create(req.body)
         .then(() => res.json({}))
         .catch(err => next(err));

@@ -25,8 +25,16 @@ app.use(passport.initialize());
 
 // api routes
 app.use('/users', require('./users/users.controller'));
-app.use('/state', require('./state/state.controller'));
-app.use('/city', require('./city/city.controller'));
+app.use('/state', require('./Area/state/state.controller'));
+app.use('/division', require('./Area/division/division.controller'));
+app.use('/district', require('./Area/district/district.controller'));
+app.use('/tehsil', require('./Area/tehsils/tehsils.controller'));
+app.use('/mahanagarpalika', require('./Area/mahanagarpalika/mahanagarpalika.controller'));
+app.use('/nagarpalika', require('./Area/nagarpalika/nagarpalika.controller'));
+app.use('/nagarpanchayat', require('./Area/nagarpanchayat/nagarpanchayat.controller'));
+app.use('/grampanchayat', require('./Area/grampanchayat/grampanchayat.controller'));
+app.use('/ward', require('./Area/ward/ward.controller'));
+//app.use('/city', require('./Area/city/city.controller'));
 app.use('/complain', require('./complain/complain.controller'));
 app.use('/subcomplain', require('./complain/sub-complain/sub-complain.controller'));
 
