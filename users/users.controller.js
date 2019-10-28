@@ -13,6 +13,7 @@ router.get('/current', getCurrent);
 //router.get('/:id', getById);
 router.get('/:username', getByUsername);
 router.delete('/:id', _delete);
+router.put('/update/:id', update);
 
 function getAll(req, res, next) {
     console.log("%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -23,7 +24,7 @@ function getAll(req, res, next) {
 
 function authenticate(req, res, next) {
     userService.authenticate(req.body)
-        .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
+        .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or Password is incorrect' }))
         .catch(err => next(err));
 }
 
@@ -83,6 +84,7 @@ function getByUsername(req, res, next) {
 }
 
 function update(req, res, next) {
+
     userService.update(req.params.id, req.body)
         .then(() => res.json({}))
         .catch(err => next(err));

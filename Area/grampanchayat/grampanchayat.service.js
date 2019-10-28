@@ -5,7 +5,7 @@ const Grampanchayat = db.Grampanchayat;
 
 module.exports = {
     getAll,
-    getByStatename,
+    getByTehsilsname,
     create
 }
 
@@ -13,9 +13,9 @@ async function getAll() {
     return await Grampanchayat.find().select('-hash');
 }
 
-async function getByStatename(statename) {
+async function getByTehsilsname(tehsilsname) {
     //  return await User.findById(username).select('-hash');
-    return await Grampanchayat.find({ statename: statename });
+    return await Grampanchayat.find({ tehsilsname: tehsilsname });
   }
 
 async function create(param){

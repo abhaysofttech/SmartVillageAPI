@@ -5,7 +5,7 @@ const grampanchayatService = require('./grampanchayat.service');
 //routes
 var app = express();
 router.get('/', getAll);
-router.get('/:statename', getByStatename);
+router.get('/:tehsilsname', getByTehsilsname);
 router.post('/register', register);
 // router.get('/admin/:statename', function(request, response, next) {
 //     var username = request.params.statename;
@@ -17,10 +17,10 @@ function getAll(req, res, next) {
         .then(grampanchayat => res.json(grampanchayat))
         .catch(err => next(err));
 }
-function getByStatename(req, res, next) {
-    console.log("getByStatename");
+function getByTehsilsname(req, res, next) {
+    console.log("getByTehsilsname");
 
-    grampanchayatService.getByStatename(req.params.statename)
+    grampanchayatService.getByTehsilsname(req.params.tehsilsname)
         .then(grampanchayat => grampanchayat ?
             res.json(grampanchayat) : res.sendStatus(404))
         .catch(err => next(err));

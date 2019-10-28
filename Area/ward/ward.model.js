@@ -9,7 +9,7 @@ const wardSchema = new Schema({
     mahanagarpalikaname: { type: String },
     nagarpalikaname: { type: String },
     nagarpanchayatname: { type: String },
-    villagename: { type: String, unique: true },
+    grampanchayatname: { type: String, unique: true },
     wardname: { type: String, unique: true, required: true },
     wardnameHindi: { type: String, unique: true },
     wardnameMarathi: { type: String, unique: true },

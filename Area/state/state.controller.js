@@ -9,7 +9,11 @@ router.post('/register', register);
 
 function getAll(req, res, next) {
     stateService.getAll()
-        .then(states => res.json(states))
+       // .then(states => res.json(states))
+        .then(states => states ? 
+            res.json(states) : 
+            res.status(401).json({ message: 'UnAuthorize User' }))
+
         .catch(err => next(err));
 }
 

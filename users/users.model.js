@@ -1,14 +1,22 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-    firstname: {type:String, required: true    },
-    lastname: {type:String, required: true    },
-    password: {type:String, required: true    },
-    phonenumber: {type:String, required: true    },
-    userid: {type:String, required: true    },
+    userid: {type:String, required: true},
+    firstname: {type:String, required: true},
+    lastname: {type:String, required: true},
+    password: {type:String, required: true},
+    phonenumber: {type:String, required: true},
     email: {type:String, default:''},
-    mobileverify: {type:String,default:true    },
-    date: {type:Date, default: Date.now    },
+    userType:{type:String, default:'user'}, //type must be superAdmin, grampanchayat, Admin, wardMember, employee, user
+    userState:{type:String, default:''},
+    userDivision:{type:String, default:''},
+    userDistrict:{type:String, default:''},
+    userZone:{type:String, default:''},
+    userVillage:{type:String},
+    userWard:{type:String, default:''},
+    mobileverify: {type:String,default:true},
+    date: {type:Date, default: Date.now},
+
     
 });
 //If you want the virtual field to be displayed on client side, 

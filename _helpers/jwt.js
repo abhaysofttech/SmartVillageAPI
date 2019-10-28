@@ -23,6 +23,7 @@ function jwt() {
             '/complain/register',
             '/subcomplain/subcomplainname',
             '/subcomplain/register',
+            '/tehsils'
             
         ]
     });
