@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
     userDivision:{type:String, default:''},
     userDistrict:{type:String, default:''},
     userZone:{type:String, default:''},
-    userVillage:{type:String},
+    userGrampanchayat:{type:String, default:''},
     userWard:{type:String, default:''},
     mobileverify: {type:String,default:true},
     date: {type:Date, default: Date.now},
