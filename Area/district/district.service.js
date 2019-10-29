@@ -25,7 +25,7 @@ async function getByStatename(statename) {
 
 async function create(param){
     if (await District.findOne({districtname: param.districtname})){
-        throw 'Districtname "' + param.districtname +'" is already taken'; 
+        throw '' + param.districtname +' District is already register'; 
     }
     const district = new District(param);
 

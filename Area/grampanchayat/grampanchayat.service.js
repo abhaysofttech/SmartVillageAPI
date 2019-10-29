@@ -20,7 +20,7 @@ async function getByTehsilsname(tehsilsname) {
 
 async function create(param){
     if (await Grampanchayat.findOne({grampanchayatname: param.grampanchayatname})){
-        throw 'Dehsilsname "' + param.grampanchayatname +'" is already taken'; 
+        throw '' + param.grampanchayatname +' Grampanchayat is already register'; 
     }
     const grampanchayat = new Grampanchayat(param);
 

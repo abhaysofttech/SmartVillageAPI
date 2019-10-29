@@ -20,7 +20,7 @@ async function getByStatename(statename) {
 
 async function create(param){
     if (await Nagarpanchayat.findOne({nagarpanchayatname: param.nagarpanchayatname})){
-        throw 'Nagarpanchayatname "' + param.nagarpanchayatname +'" is already taken'; 
+        throw '' + param.nagarpanchayatname +' Nagarpanchayat is already register'; 
     }
     const nagarpanchayat = new Nagarpanchayat(param);
 

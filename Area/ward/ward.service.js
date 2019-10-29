@@ -20,7 +20,7 @@ async function getByStatename(statename) {
 
 async function create(param){
     if (await Ward.findOne({wardname: param.wardname})){
-        throw 'Dehsilsname "' + param.wardname +'" is already taken'; 
+        throw '' + param.wardname +' Ward is already register'; 
     }
     const ward = new Ward(param);
 

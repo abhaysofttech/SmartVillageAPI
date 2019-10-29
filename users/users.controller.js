@@ -29,7 +29,6 @@ function authenticate(req, res, next) {
 }
 
 function register(req, res, next) {
-    debugger
   //  const {username, email, password, conformPassword} = req.body;
     // const {firstname, lastname, phonenumber, userid, email, mobileverify} = req.body;
     console.log(req.body);

@@ -20,7 +20,7 @@ async function getByStatename(statename) {
 
 async function create(param){
     if (await Mahanagarpalika.findOne({mahanagarpalikaname: param.mahanagarpalikaname})){
-        throw 'Mahanagarpalikaname "' + param.mahanagarpalikaname +'" is already taken'; 
+        throw '' + param.mahanagarpalikaname +' Mahanagarpalika is already register'; 
     }
     const mahanagarpalika = new Mahanagarpalika(param);
 

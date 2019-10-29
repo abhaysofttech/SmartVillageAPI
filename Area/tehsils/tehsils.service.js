@@ -26,7 +26,7 @@ async function getByStatename(statename) {
 
 async function create(param){
     if (await Tehsils.findOne({tehsilsname: param.tehsilsname})){
-        throw 'Dehsilsname "' + param.tehsilsname +'" is already taken'; 
+        throw '' + param.tehsilsname +' Tehsil is already register'; 
     }
     const tehsils = new Tehsils(param);
 

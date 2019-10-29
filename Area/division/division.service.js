@@ -20,7 +20,7 @@ async function getByStatename(statename) {
 
 async function create(param){
     if (await Division.findOne({divisionname: param.divisionname})){
-        throw 'Divisionname "' + param.divisionname +'" is already taken'; 
+        throw '' + param.divisionname +' Division is already register'; 
     }
     const division = new Division(param);
 

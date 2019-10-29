@@ -14,7 +14,7 @@ async function getAll() {
 
 async function create(param){
     if (await State.findOne({statename: param.statename})){
-        throw 'StateName "' + param.statename +'" is already taken'; 
+        throw '' + param.statename +' State is already register'; 
     }
     const state = new State(param);
 
