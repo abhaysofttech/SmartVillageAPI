@@ -6,8 +6,21 @@ const bodyParser= require('body-parser');
 const jwt = require('_helpers/jwt');
 const errorHandler = require('_helpers/error-handler');
 const passport = require('passport');
+const allowedOrigins = [
+  'capacitor://localhost',
+  'ionic://localhost',
+  'http://localhost',
+  'http://localhost:8080',
+  'http://localhost:8100'
+];
 const options = {
-    origin: true,
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Origin not allowed by CORS'));
+    }
+  },
   "Access-Control-Allow-Credentials": true,
 
   "Access-Control-Allow-Origin": '*',
